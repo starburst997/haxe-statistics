@@ -1,0 +1,12 @@
+{
+	"name" : "stats",
+	"url" : "https://github.com/starburst997/haxe-stats",
+	"license" : "MIT",
+  "tags": ["stats", "openfl"],
+  "description" : "Stats utility",
+  "version" : "1.0.0",
+  "classPath": "src/",
+	"releasenote" : "",
+	"contributors" : ["starburst997"],
+	"dependencies" : {}
+}
