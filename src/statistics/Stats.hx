@@ -122,9 +122,7 @@ class Stats extends Sprite {
 	public function new() {
 
 		super();
-
-    trace("Stats!");
-
+    
 		mem_max = 0;
 		fps = 0;
 
@@ -133,6 +131,8 @@ class Stats extends Sprite {
     #else
     var fontName = "Arial";
     #end
+    
+    trace("Stats", fontName);
 
 		var format = new TextFormat( fontName, 10, 0xdbf043 );
 
@@ -164,7 +164,13 @@ class Stats extends Sprite {
 		if (f != null)
 		{
 			trace("Found font:", f.fontName);
-			return f.fontName;
+      
+      var name = f.fontName;
+      
+      if ( (name != "") && (name != null) )
+      {
+        return f.fontName;
+      }
 		}
     #end
 
