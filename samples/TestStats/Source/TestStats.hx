@@ -1,7 +1,7 @@
 package;
 
 import statistics.Stats;
-import trace.TraceTimer;
+import statistics.TraceTimer;
 
 // Tests
 enum Tests
