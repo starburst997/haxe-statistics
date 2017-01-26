@@ -1,6 +1,7 @@
 package;
 
 import statistics.Stats;
+import trace.TraceTimer;
 
 // Tests
 enum Tests
@@ -23,6 +24,8 @@ class TestStats
   // Run some tests
   public function new()
   {
+    TraceTimer.activate();
+
     trace("TestStats Launch");
 
     var test = Test1;
@@ -39,5 +42,7 @@ class TestStats
     trace("Test 1");
 
     stats = new Stats();
+
+    trace("Finished");
   }
 }
