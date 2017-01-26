@@ -1,4 +1,4 @@
-package;
+package statistics;
 
 #if (!openfl && js)
 
@@ -10,7 +10,7 @@ class Stats
 	public function new()
 	{
 		stats = new Perf();
-    
+
     trace("Stats!");
 	}
 }
@@ -122,20 +122,20 @@ class Stats extends Sprite {
 	public function new() {
 
 		super();
-    
+
     trace("Stats!");
-    
+
 		mem_max = 0;
 		fps = 0;
-    
+
     #if openfl
     var fontName = font("DejaVuSans.ttf");
     #else
     var fontName = "Arial";
     #end
-    
+
 		var format = new TextFormat( fontName, 10, 0xdbf043 );
-    
+
 		mouseEnabled = false;
 		mouseChildren = false;
 
@@ -144,9 +144,9 @@ class Stats extends Sprite {
 		text.height = TEXT_HEIGHT;
 		text.defaultTextFormat = format;
 		text.selectable = false;
-    
+
 		text.embedFonts = fontName != "Arial";
-		
+
     text.mouseEnabled = false;
 
 		rectangle = new Rectangle(GRAPH_WIDTH - 1, 0, 1, GRAPH_HEIGHT);
@@ -167,7 +167,7 @@ class Stats extends Sprite {
 			return f.fontName;
 		}
     #end
-    
+
 		return "Arial";
 	}
 
