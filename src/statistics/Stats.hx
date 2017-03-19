@@ -262,7 +262,13 @@ class Stats extends Sprite {
 			graph.lock();
 			//graph.scroll(-1, 0);
 			graph.copyPixels( graph, new Rectangle( 1, 0, graph.width - 1, graph.height ), new Point( 0, 0 ) );
-			graph.fillRect(rectangle, 0xBF000000 + bgColor);
+			//graph.fillRect(rectangle, 0xBF000000 + bgColor);
+      
+      for ( y in 0...GRAPH_HEIGHT )
+			{
+				graph.setPixel32( graph.width - 1, y, 0xFF000000 + bgColor );
+			}
+      
 			/*#if html5
 			graph.setPixel(XPOS, fps_graph, fpsColor);
 			graph.setPixel(XPOS, ms_graph, msColor);
