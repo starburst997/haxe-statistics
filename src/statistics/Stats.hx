@@ -38,6 +38,7 @@ import openfl.display.Bitmap;
 import openfl.display.BitmapData;
 import openfl.display.Sprite;
 import openfl.display.Stage;
+import openfl.display.PixelSnapping;
 import openfl.events.Event;
 import openfl.geom.Matrix;
 import openfl.geom.Point;
@@ -52,6 +53,7 @@ import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.display.Sprite;
 import flash.display.Stage;
+import flash.display.PixelSnapping;
 import flash.events.Event;
 import flash.geom.Matrix;
 import flash.geom.Point;
@@ -198,7 +200,7 @@ class Stats extends Sprite {
 		}
 		graph.unlock();
 
-		bitmap = new Bitmap( graph );
+		bitmap = new Bitmap( graph, PixelSnapping.AUTO, true );
 		bitmap.y = TEXT_HEIGHT;
 		bitmap.alpha = 0.75;
 
